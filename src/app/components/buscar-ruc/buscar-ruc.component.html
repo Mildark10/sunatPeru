@@ -1,37 +1,43 @@
-<div>
-    <input type="text" id="ruc" name="ruc" #ruc>
-    <button (click)="buscarRuc(ruc.value)">Buscar</button>
-</div>
-
-<div>
-    <p class="bold">Razon Social </p> 
-    <span> :{{empresa.razonSocial}}</span>
-</div>
-<div>
-    <p class="bold">Dirección</p>
-    <p> : {{empresa.direccion}}</p>
-</div>
-<div>
-    <p class="bold">Nombre Comercial</p>
-    <p> : {{empresa.nombreComercial}}</p>
-</div>
-<div>
-    <p class="bold">Estado</p>
-    <p> : {{empresa.estado}}</p>
-</div>
-<div>
-    <p class="bold">Condicion</p>
-    <p> : {{empresa.condicion}}</p>
-</div>
-<div>
-    <p class="bold">Estado</p>
-    <p> : {{empresa.estado}}</p>
-</div>
-<div>
-    <p class="bold">Fecha Inscripción</p>
-    <p> : {{empresa.fechaInscripcion}}</p>
-</div>
-<div>
-    <p class="bold">Actividades secundarias</p>
-    <p *ngFor="let item of empresa.otrasActividades"> • {{item}}</p>
+<div class="main">
+    <h2>Buscador de Ruc Sunat Peru</h2>
+    <div class="main__search" id="main-search">
+        <input type="text" placeholder="Ingrese el numero RUC " id="ruc" name="ruc" #ruc>
+        <button (click)="buscarRuc(ruc.value)">Buscar</button>
+    </div>
+    
+    <div class="main__text" >
+        
+        <p class="bold">Razon Social </p> 
+        <p> {{empresa.razonSocial}}</p>
+       <!--  <p>
+        </p> -->
+    </div>
+    <div class="main__text">
+        <p class="bold">Dirección</p>
+        <p> {{empresa.direccion}}</p>
+    </div>
+    <div class="main__text">
+        <p class="bold">Nombre Comercial</p>
+        <p>{{empresa.nombreComercial}}</p>
+    </div>
+    <div class="main__text">
+        <p class="bold">Estado</p>
+        <p>{{empresa.estado}}</p>
+    </div>
+    <div class="main__text">
+        <p class="bold">Condicion</p>
+        <p>{{empresa.condicion}}</p>
+    </div>
+    <div class="main__text">
+        <p class="bold">Estado</p>
+        <p>{{empresa.estado}}</p>
+    </div>
+    <div class="main__text">
+        <p class="bold">Fecha Inscripción</p>
+        <p>{{empresa.fechaInscripcion}}</p>
+    </div>
+    <div class="main__text">
+        <p class="bold">Actividades secundarias</p>
+        <p *ngFor="let item of empresa.otrasActividades"> • {{item}}</p>
+    </div>
 </div>

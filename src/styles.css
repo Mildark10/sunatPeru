@@ -1,1 +1,140 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,700&display=swap');
+
+body {
+    background-color: #eff3f8;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(110, 103, 103);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: -2px 4px 2px #4a4b4b;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main h2 {
+    text-align: center;
+    color: #34495E;
+    margin: 0 0 2em 0;
+}
+
+.main__search {
+    position: absolute;
+    display: flex;
+    top: 4em;
+    background: #6a89cc;
+    width: 350px;
+    height: 28px;
+    padding: 0.2rem 0.6rem 0.1rem 0.2rem;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+        2px 2px 0 0 #4a69bd,
+        3px 3px 0 0 #4a69bd,
+        4px 4px 0 0 #4a69bd,
+        5px 5px 0 0 #4a69bd,
+        6px 6px 0 0 #4a69bd;
+
+}
+
+.main__search input {
+    border: 0;
+    outline: none;
+    height: 100%;
+    width: 85%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.main__search input::placeholder {
+    color: #3d569c;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.main__search button {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+/* 
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+    
+
+} */
+
+/* Para 320px */
+@media only screen and (max-width: 540px) and (min-width: 240px) {
+    .main__search {
+        top: 6em;
+        width: 55%;
+    }
+
+    .main__search input {
+        width: 49%;
+    }
+
+    .main__search input::placeholder {
+        font-size: 0.7em;
+    }
+}
+
+
+.main__text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5em;
+    padding: 0.5em 5em 0 1em;
+}
+
+.main__text .bold {
+    padding-right: 2em;
+}
+
+.main__text span {
+    margin-left: 15px;
+    font-size: medium;
+    font-weight: 500;
+    color: #34495E;
+}
+
+.main__text .bold {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 540px) and (min-width: 240px) {
+
+    .main {
+        width: 95%;
+    }
+
+    .main__text p {
+        font-size: 0.8em;
+    }
+
+    .main__search {
+        top: 3.5em;
+    }
+
+}
+
+
+@media only screen and (max-width: 640px) and (min-width: 540px) {
+    .main {
+        width: 95%;
+    }
+
+}
