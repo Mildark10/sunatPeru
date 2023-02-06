@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SunatService } from 'src/app/services/sunat.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-buscar-ruc',
@@ -21,7 +22,11 @@ export class BuscarRucComponent implements OnInit {
       console.log(this.sSunat);
 
       if (!r.success) {
-        alert(r.message);
+        Swal.fire({
+          title: r.message,
+          text: 'Numero RUC no ingresado o es incorrecto',
+          icon: 'error',
+        });
         this.empresa.razonSocial = "";
       }
       else {
